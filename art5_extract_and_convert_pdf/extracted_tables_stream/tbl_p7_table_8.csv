@@ -1,0 +1,53 @@
+"","","","faciliteit 
+debiteurencategorie 
+tradesector 
+produkt 
+contract type 
+letterrating 
+ 
+2_50","polis details"
+"2_10","Regio & premieklasse per faciliteit & product","faciliteit","",""
+"","","","2_60",""
+"2_20","Land per faciliteit & produkt","regio","2_10 
+  
+  
+2_10",""
+"","","Premie-","",""
+"2_30","Premieklasse & produkt per sector","","2_10 
+  
+2_30 
+2_10 
+2_50 
+2_90",""
+"","","klasse","",""
+"2_40","Land & produkt per debiteuren categorie","land","2_20 
+2_40 
+  
+2_20 
+2_60",""
+"2_50","Faciliteit & premieklasse & produkt per contracttype","debiteur","",""
+"","","","2_50",""
+"2_60","Faciliteit & land & produkt per contracttype","produkt","2_40 
+2_30 
+  
+2_90",""
+"","","","2_60",""
+"","","","2_65 
+2_65 
+2_65 
+2_65","2_65"
+"2_65","Herverzekerd per herverzekeraar per polis","polissen","",""
+"","","","2_70 
+2_70 
+2_70 
+2_70","2_70"
+"2_70","Polisoverzicht per land","valuta","2_80","2_85"
+"2_80","Koersrisico obligo en vreemde valutadekking per valuta","","",""
+"2_85","Koersrisico obligo per valuta","","",""
+"2_90","Premieklasse & produkt per letterrating","","",""
+"V","et: zowel de stand als de mutaties","","",""
+"a","nominaal bruto obligo","e","nominaal bruto vreemde valuta dekking",""
+"b","nominaal netto obligo","f","nominaal netto vreemde valuta dekking",""
+"c","reëel bruto obligo","g","reëel bruto vreemde valuta dekking",""
+"d","reëel netto obligo","h","reëel netto vreemde valuta dekking",""
+"rwd","risico gewogen reëel netto obligo","rwh","risico gewogen reëel netto vreemde valuta dekking",""

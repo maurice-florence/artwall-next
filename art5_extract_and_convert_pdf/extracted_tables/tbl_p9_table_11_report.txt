@@ -1,0 +1,4 @@
+Table Report - Page 9, Table 11
+Accuracy: 78.60079598811852
+Parsing Report:
+{'accuracy': 78.6, 'whitespace': 21.05, 'order': 1, 'page': 9}

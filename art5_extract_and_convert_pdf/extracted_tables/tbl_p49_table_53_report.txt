@@ -1,0 +1,4 @@
+Table Report - Page 49, Table 53
+Accuracy: 97.57163952868694
+Parsing Report:
+{'accuracy': 97.57, 'whitespace': 62.22, 'order': 1, 'page': 49}
