@@ -1,0 +1,6 @@
+*.csv
+agent-librarian/__pycache__/
+agent-librarian/venv/
+agent-librarian/chroma_langchain_db/
+agent-librarian/context/
+agent-librarian/goodreads_assistant.log
