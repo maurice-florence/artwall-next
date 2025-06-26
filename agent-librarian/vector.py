@@ -1,33 +1,15 @@
 # vector.py
-from langchain_ollama import OllamaEmbeddings
-from langchain_chroma import Chroma
 from langchain_core.documents import Document
 import os
 import pandas as pd
+import streamlit as st
 
-# Load the dataset
-df = pd.read_csv("context/goodreads_library_export.csv")
-
-# Initialize embeddings model
-embeddings = OllamaEmbeddings(model="mxbai-embed-large")
-db_location = "./chroma_langchain_db"
-
-# Check if we need to add documents
-add_documents = not os.path.exists(db_location)
-
-# Create the vector store instance
-vector_store = Chroma(
-    collection_name="goodreads",
-    persist_directory=db_location,
-    embedding_function=embeddings,
-)
-
-# Add documents if needed
-if add_documents:
+# Function to create documents from dataframe
+def create_documents_from_df(df):
+    """Create document objects from dataframe rows"""
     documents = []
-    ids = []
     
-    # First, handle any missing columns by filling NaN values
+    # Handle any missing columns by filling NaN values
     df = df.fillna("")
     
     for i, row in df.iterrows():
@@ -51,18 +33,37 @@ if add_documents:
             metadata=metadata
         )
         
-        ids.append(str(i))
         documents.append(doc)
     
-    print(f"Adding {len(documents)} documents to vector store...")
-    # Add documents to the vector store
-    vector_store.add_documents(documents=documents, ids=ids)
-    print("Documents added successfully!")
+    return documents
 
-# Create a retriever from the vector store
-retriever = vector_store.as_retriever(
-    search_kwargs={"k": 5}
-)
+# Function to get or create vector store
+# Notice the leading underscore in _embeddings parameter to prevent hashing
+@st.cache_resource
+def get_vector_store(_embeddings, df):
+    """Create or get vector store"""
+    if _embeddings is None:
+        return None
+    
+    try:
+        from langchain_community.vectorstores import FAISS
+        
+        # Always create a fresh index in cloud environments
+        documents = create_documents_from_df(df)
+        
+        if not documents:
+            st.warning("No documents to create embeddings from.")
+            return None
+            
+        st.info(f"Creating vector store with {len(documents)} documents...")
+        vector_store = FAISS.from_documents(documents, _embeddings)
+        st.success("Vector store created successfully!")
+        
+        return vector_store
+    
+    except Exception as e:
+        st.error(f"Error creating vector store: {str(e)}")
+        return None
 
 # Function to help with displaying retrieved data
 def get_book_details(retrieved_docs):
@@ -88,10 +89,5 @@ def get_book_details(retrieved_docs):
     
     return "\n".join(details)
 
-# If this file is run directly, test the retriever
-if __name__ == "__main__":
-    query = input("Enter a test query: ")
-    results = retriever.invoke(query)
-    formatted_results = get_book_details(results)
-    print(f"\nFound {len(results)} relevant books:")
-    print(formatted_results)
+# Global retriever variable - this will be initialized in app.py
+retriever = None

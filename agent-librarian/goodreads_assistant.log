@@ -169,3 +169,386 @@ Top 10 authors by number of books:
 3. Louis Couperus (14 books)
 
 2025-04-06 09:46:32 - --------------------------------------------------
+2025-04-06 10:52:18 - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2025-04-06 10:52:18 - Loading faiss with AVX2 support.
+2025-04-06 10:52:18 - Successfully loaded faiss with AVX2 support.
+2025-04-06 10:52:18 - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes.
+2025-04-06 10:53:17 - Question: Which author did I read the most?
+2025-04-06 10:53:17 - Question type: author_stats, Number: 10, Simple: False
+2025-04-06 10:53:17 - Answer: Author Statistics:
+==================
+
+Top 10 authors by number of books:
+- Knut Hamsun: 14 books
+  Books:
+  - a lecture tour (My Rating: 3)
+  - The Last Joy (My Rating: 3)
+  - Con Sordino (My Rating: 4)
+  - Onder de herfstster (My Rating: 4)
+  - Benoni & Rosa (My Rating: 4)
+  - Growth of the Soil (My Rating: 5)
+  - Markens grøde (My Rating: 5)
+  - Growth of the Soil (My Rating: 5)
+  - Wayfarers (Sun & Moon Classics) (My Rating: 4)
+  - Victoria (My Rating: 4)
+  - On Overgrown Paths (My Rating: 3)
+  - Pan (My Rating: 4)
+  - Mysteries (My Rating: 4)
+  - Hunger (My Rating: 5)
+  Average rating: 4.1/5
+
+- Hermann Hesse: 14 books
+  Books:
+  - Gertrud (My Rating: 4)
+  - Prooi van heimwee (My Rating: 3)
+  - Knulp: drie episoden uit Knulps levensverhaal (My Rating: 4)
+  - Tegendraads (My Rating: 3)
+  - Demian (My Rating: 4)
+  - The Glass Bead Game (My Rating: 5)
+  - Siddhartha (My Rating: 5)
+  - Steppenwolf (My Rating: 5)
+  - Narziss en Goldmund (Grote ABC) (My Rating: 5)
+  - Gertrud (My Rating: 4)
+  - Peter Camenzind (My Rating: 4)
+  - De avonturen van Hermann Lauscher (My Rating: 3)
+  - The Journey to the East (My Rating: 3)
+  - Beneath the Wheel (My Rating: Unrated)
+  Average rating: 3.7/5
+
+- Louis Couperus: 14 books
+  Books:
+  - Van oude mensen, de dingen, die voorbijgaan... (My Rating: 5)
+  - Noodlot (My Rating: 4)
+  - Langs lijnen van geleidelijkheid (My Rating: 4)
+  - Metamorfoze (Salamander) (My Rating: Unrated)
+  - Extase (My Rating: 4)
+  - Langs lijnen van geleidelijkheid (My Rating: Unrated)
+  - Eline Vere (My Rating: 4)
+  - Psyche (My Rating: 5)
+  - De berg van licht (My Rating: Unrated)
+  - De boeken der kleine zielen (De boeken der kleine zielen I en II) (My Rating: Unrated)
+  - De stille kracht (My Rating: 4)
+  - Fidessa (My Rating: 5)
+  - De Zwaluwen Neergestreken   (Salamander) (My Rating: Unrated)
+  - Als ik, bij voorbeeld, de geest van mijn moeder op den rand van mijn bed zag zitten : okkulte knipsels uit Couperus (My Rating: Unrated)
+  Average rating: 2.5/5
+
+- Michel Foucault: 14 books
+  Books:
+  - The Birth of Biopolitics: Lectures at the Collège de France, 1978-1979 (My Rating: 4)
+  - Power/Knowledge: Selected Interviews and Other Writings, 1972-1977 (My Rating: 4)
+  - Madness and Civilization: A History of Insanity in the Age of Reason (My Rating: 5)
+  - The Foucault Reader (My Rating: 4)
+  - The Archaeology of Knowledge (My Rating: 5)
+  - Ethics: Subjectivity and Truth (My Rating: 4)
+  - The History of Sexuality 1: The Will to Knowledge (My Rating: 5)
+  - Histoire de la sexualité IV: Les aveux de la chair (My Rating: Unrated)
+  - Security, Territory, Population: Lectures at the Collège de France, 1977-1978 (My Rating: Unrated)
+  - The Birth of the Clinic: An Archaeology of Medical Perception (My Rating: Unrated)
+  - The Order of Things: An Archaeology of the Human Sciences (My Rating: 5)
+  - Discipline and Punish: The Birth of the Prison (My Rating: 5)
+  - Religion and Culture (My Rating: Unrated)
+  - Herculine Barbin: Being the Recently Discovered Memoirs of a Nineteenth-Century French Hermaphrodite (My Rating: Unrated)
+  Average rating: 2.9/5
+
+- Jan Wolkers: 10 books
+  Books:
+  - Zomerhitte (My Rating: 2)
+  - Turks Fruit (My Rating: Unrated)
+  - De doodshoofdvlinder (My Rating: Unrated)
+  - Terug naar Oegstgeest (My Rating: 2)
+  - Turks Fruit (My Rating: 5)
+  - Zwarte Bevrijding (My Rating: 2)
+  - Brandende liefde (My Rating: 4)
+  - Kort Amerikaans (My Rating: 4)
+  - Een roos van vlees (My Rating: Unrated)
+  - De hond met de blauwe tong (My Rating: Unrated)
+  Average rating: 1.9/5
+
+- Godfried Bomans: 10 books
+  Books:
+  - Pieter Bas: Memoires of gedenkschriften van minister Pieter Bas (My Rating: 3)
+  - Facetten: Nieuwe buitelingen I (My Rating: 4)
+  - Een mooie tijd (My Rating: 4)
+  - Beminde gelovigen (My Rating: 3)
+  - Sprookjes van Godfried Bomans (My Rating: 4)
+  - Erik of het klein Insectenboek (My Rating: 4)
+  - groot verhalenboek (My Rating: 3)
+  - Pa Pinkelman in de politiek (My Rating: Unrated)
+  - De avonturen van Pa Pinkelman & Tante Pollewop (My Rating: 4)
+  - De avonturen van tante Pollewop (My Rating: 3)
+  Average rating: 3.2/5
+
+- Marten Toonder: 10 books
+  Books:
+  - Praw!!! Der Hemeldonderweder (My Rating: 3)
+  - Altijd dezelfde (My Rating: 3)
+  - Een Bommelding (My Rating: 4)
+  - Een groot denkraam (My Rating: 4)
+  - Zeg nu zelf... (My Rating: 4)
+  - En daar houd ik mij aan... (My Rating: 4)
+  - Overgehaalde landrotten (My Rating: 4)
+  - Zaken zijn zaken (My Rating: Unrated)
+  - Geld speelt geen rol (My Rating: Unrated)
+  - Ach mallerd (My Rating: Unrated)
+  Average rating: 2.6/5
+
+- F. Bordewijk: 10 books
+  Books:
+  - Bint (My Rating: 3)
+  - De wingerdrank (My Rating: Unrated)
+  - Verhalen - Kelders en paleizen (My Rating: Unrated)
+  - Karakter (My Rating: 5)
+  - Blokken / Knorrende beesten / Bint (My Rating: Unrated)
+  - Bij gaslicht (My Rating: 3)
+  - De Golbertons (My Rating: Unrated)
+  - Blokken (My Rating: 3)
+  - Knorrende beesten (My Rating: 4)
+  - De zigeuners: twaalf korte verhalen en een schets (My Rating: 4)
+  Average rating: 2.2/5
+
+- Sigmund Freud: 10 books
+  Books:
+  - The Interpretation of Dreams (Classics of World Literature) (My Rating: 5)
+  - The Future of an Illusion (My Rating: Unrated)
+  - Civilization and its Discontents (My Rating: 4)
+  - The Psychopathology of Everyday Life (My Rating: 5)
+  - Moses and Monotheism (My Rating: 3)
+  - Totem and Taboo (Dover Thrift Editions) (My Rating: 4)
+  - The Question of Lay Analysis: (The Standard Edition) (My Rating: 4)
+  - A General Introduction to Psychoanalysis (My Rating: 5)
+  - Group Psychology and the Analysis of the Ego (My Rating: Unrated)
+  - The Unconscious (My Rating: Unrated)
+  Average rating: 3.0/5
+
+- J.R.R. Tolkien: 8 books
+  Books:
+  - Sprookjes van Tolkien (My Rating: 4)
+  - J.R.R. Tolkien 4-Book Boxed Set: The Hobbit and The Lord of the Rings (My Rating: 5)
+  - The Hobbit, or There and Back Again (My Rating: 4)
+  - Tree and Leaf, Smith of Wootton Major, The Homecoming of Beorhtnoth (My Rating: Unrated)
+  - De reisgenoten (In de ban van de ring, #1) (My Rating: Unrated)
+  - Le due torri (Il Signore degli Anelli, #2) (My Rating: 5)
+  - La Compagnia dell'Anello (Il Signore degli Anelli, #1) (My Rating: 5)
+  - Il ritorno del re (Il Signore degli Anelli, #3) (My Rating: 5)
+  Average rating: 3.5/5
+
+
+2025-04-06 10:53:17 - --------------------------------------------------
+2025-04-06 10:53:45 - Question: Who is my favourite author?
+2025-04-06 10:53:45 - Question type: rag, Number: 10, Simple: False
+2025-04-06 10:55:35 - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2025-04-06 10:55:35 - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2025-04-06 10:56:04 - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-04-06 10:56:50 - Answer: What an intriguing collection of books! Based on the data from your Goodreads library, I'm going to take a stab at identifying your favorite author. 
+
+Firstly, it's clear that you have a strong affinity for James Joyce, as both "A Portrait of the Artist as a Young Man" and "Ulysses" are 5-star reads in your collection. This suggests that you appreciate Joyce's unique writing style, which is known for its experimental nature and exploration of themes such as identity, morality, and the human condition.
+
+The fact that you've read both novels multiple times (based on their publication dates) also implies a deep engagement with Joyce's work and a desire to revisit and re-explore his ideas. This level of enthusiasm is often indicative of a strong connection between reader and author.
+
+While it's possible that your favorite author could be someone else entirely, the sheer number of 5-star ratings for James Joyce's works in your library makes him a strong contender for the title. Additionally, the fact that you've read his books multiple times suggests a level of comfort and familiarity with his writing style, which is often a hallmark of a favorite author.
+
+Of course, I could be wrong! If there are other authors or books in your library that have captured your heart, please feel free to share more information.
+2025-04-06 10:56:50 - --------------------------------------------------
+2025-04-06 11:05:57 - Question: Which author do I read the most?
+2025-04-06 11:05:57 - Question type: author_stats, Number: 10, Simple: False
+2025-04-06 11:05:57 - Using temperature: 0.1
+2025-04-06 11:05:57 - Answer: Author Statistics:
+==================
+
+Top 10 authors by number of books:
+- Knut Hamsun: 14 books
+  Books:
+  - a lecture tour (My Rating: 3)
+  - The Last Joy (My Rating: 3)
+  - Con Sordino (My Rating: 4)
+  - Onder de herfstster (My Rating: 4)
+  - Benoni & Rosa (My Rating: 4)
+  - Growth of the Soil (My Rating: 5)
+  - Markens grøde (My Rating: 5)
+  - Growth of the Soil (My Rating: 5)
+  - Wayfarers (Sun & Moon Classics) (My Rating: 4)
+  - Victoria (My Rating: 4)
+  - On Overgrown Paths (My Rating: 3)
+  - Pan (My Rating: 4)
+  - Mysteries (My Rating: 4)
+  - Hunger (My Rating: 5)
+  Average rating: 4.1/5
+
+- Hermann Hesse: 14 books
+  Books:
+  - Gertrud (My Rating: 4)
+  - Prooi van heimwee (My Rating: 3)
+  - Knulp: drie episoden uit Knulps levensverhaal (My Rating: 4)
+  - Tegendraads (My Rating: 3)
+  - Demian (My Rating: 4)
+  - The Glass Bead Game (My Rating: 5)
+  - Siddhartha (My Rating: 5)
+  - Steppenwolf (My Rating: 5)
+  - Narziss en Goldmund (Grote ABC) (My Rating: 5)
+  - Gertrud (My Rating: 4)
+  - Peter Camenzind (My Rating: 4)
+  - De avonturen van Hermann Lauscher (My Rating: 3)
+  - The Journey to the East (My Rating: 3)
+  - Beneath the Wheel (My Rating: Unrated)
+  Average rating: 3.7/5
+
+- Louis Couperus: 14 books
+  Books:
+  - Van oude mensen, de dingen, die voorbijgaan... (My Rating: 5)
+  - Noodlot (My Rating: 4)
+  - Langs lijnen van geleidelijkheid (My Rating: 4)
+  - Metamorfoze (Salamander) (My Rating: Unrated)
+  - Extase (My Rating: 4)
+  - Langs lijnen van geleidelijkheid (My Rating: Unrated)
+  - Eline Vere (My Rating: 4)
+  - Psyche (My Rating: 5)
+  - De berg van licht (My Rating: Unrated)
+  - De boeken der kleine zielen (De boeken der kleine zielen I en II) (My Rating: Unrated)
+  - De stille kracht (My Rating: 4)
+  - Fidessa (My Rating: 5)
+  - De Zwaluwen Neergestreken   (Salamander) (My Rating: Unrated)
+  - Als ik, bij voorbeeld, de geest van mijn moeder op den rand van mijn bed zag zitten : okkulte knipsels uit Couperus (My Rating: Unrated)
+  Average rating: 2.5/5
+
+- Michel Foucault: 14 books
+  Books:
+  - The Birth of Biopolitics: Lectures at the Collège de France, 1978-1979 (My Rating: 4)
+  - Power/Knowledge: Selected Interviews and Other Writings, 1972-1977 (My Rating: 4)
+  - Madness and Civilization: A History of Insanity in the Age of Reason (My Rating: 5)
+  - The Foucault Reader (My Rating: 4)
+  - The Archaeology of Knowledge (My Rating: 5)
+  - Ethics: Subjectivity and Truth (My Rating: 4)
+  - The History of Sexuality 1: The Will to Knowledge (My Rating: 5)
+  - Histoire de la sexualité IV: Les aveux de la chair (My Rating: Unrated)
+  - Security, Territory, Population: Lectures at the Collège de France, 1977-1978 (My Rating: Unrated)
+  - The Birth of the Clinic: An Archaeology of Medical Perception (My Rating: Unrated)
+  - The Order of Things: An Archaeology of the Human Sciences (My Rating: 5)
+  - Discipline and Punish: The Birth of the Prison (My Rating: 5)
+  - Religion and Culture (My Rating: Unrated)
+  - Herculine Barbin: Being the Recently Discovered Memoirs of a Nineteenth-Century French Hermaphrodite (My Rating: Unrated)
+  Average rating: 2.9/5
+
+- Jan Wolkers: 10 books
+  Books:
+  - Zomerhitte (My Rating: 2)
+  - Turks Fruit (My Rating: Unrated)
+  - De doodshoofdvlinder (My Rating: Unrated)
+  - Terug naar Oegstgeest (My Rating: 2)
+  - Turks Fruit (My Rating: 5)
+  - Zwarte Bevrijding (My Rating: 2)
+  - Brandende liefde (My Rating: 4)
+  - Kort Amerikaans (My Rating: 4)
+  - Een roos van vlees (My Rating: Unrated)
+  - De hond met de blauwe tong (My Rating: Unrated)
+  Average rating: 1.9/5
+
+- Godfried Bomans: 10 books
+  Books:
+  - Pieter Bas: Memoires of gedenkschriften van minister Pieter Bas (My Rating: 3)
+  - Facetten: Nieuwe buitelingen I (My Rating: 4)
+  - Een mooie tijd (My Rating: 4)
+  - Beminde gelovigen (My Rating: 3)
+  - Sprookjes van Godfried Bomans (My Rating: 4)
+  - Erik of het klein Insectenboek (My Rating: 4)
+  - groot verhalenboek (My Rating: 3)
+  - Pa Pinkelman in de politiek (My Rating: Unrated)
+  - De avonturen van Pa Pinkelman & Tante Pollewop (My Rating: 4)
+  - De avonturen van tante Pollewop (My Rating: 3)
+  Average rating: 3.2/5
+
+- Marten Toonder: 10 books
+  Books:
+  - Praw!!! Der Hemeldonderweder (My Rating: 3)
+  - Altijd dezelfde (My Rating: 3)
+  - Een Bommelding (My Rating: 4)
+  - Een groot denkraam (My Rating: 4)
+  - Zeg nu zelf... (My Rating: 4)
+  - En daar houd ik mij aan... (My Rating: 4)
+  - Overgehaalde landrotten (My Rating: 4)
+  - Zaken zijn zaken (My Rating: Unrated)
+  - Geld speelt geen rol (My Rating: Unrated)
+  - Ach mallerd (My Rating: Unrated)
+  Average rating: 2.6/5
+
+- F. Bordewijk: 10 books
+  Books:
+  - Bint (My Rating: 3)
+  - De wingerdrank (My Rating: Unrated)
+  - Verhalen - Kelders en paleizen (My Rating: Unrated)
+  - Karakter (My Rating: 5)
+  - Blokken / Knorrende beesten / Bint (My Rating: Unrated)
+  - Bij gaslicht (My Rating: 3)
+  - De Golbertons (My Rating: Unrated)
+  - Blokken (My Rating: 3)
+  - Knorrende beesten (My Rating: 4)
+  - De zigeuners: twaalf korte verhalen en een schets (My Rating: 4)
+  Average rating: 2.2/5
+
+- Sigmund Freud: 10 books
+  Books:
+  - The Interpretation of Dreams (Classics of World Literature) (My Rating: 5)
+  - The Future of an Illusion (My Rating: Unrated)
+  - Civilization and its Discontents (My Rating: 4)
+  - The Psychopathology of Everyday Life (My Rating: 5)
+  - Moses and Monotheism (My Rating: 3)
+  - Totem and Taboo (Dover Thrift Editions) (My Rating: 4)
+  - The Question of Lay Analysis: (The Standard Edition) (My Rating: 4)
+  - A General Introduction to Psychoanalysis (My Rating: 5)
+  - Group Psychology and the Analysis of the Ego (My Rating: Unrated)
+  - The Unconscious (My Rating: Unrated)
+  Average rating: 3.0/5
+
+- J.R.R. Tolkien: 8 books
+  Books:
+  - Sprookjes van Tolkien (My Rating: 4)
+  - J.R.R. Tolkien 4-Book Boxed Set: The Hobbit and The Lord of the Rings (My Rating: 5)
+  - The Hobbit, or There and Back Again (My Rating: 4)
+  - Tree and Leaf, Smith of Wootton Major, The Homecoming of Beorhtnoth (My Rating: Unrated)
+  - De reisgenoten (In de ban van de ring, #1) (My Rating: Unrated)
+  - Le due torri (Il Signore degli Anelli, #2) (My Rating: 5)
+  - La Compagnia dell'Anello (Il Signore degli Anelli, #1) (My Rating: 5)
+  - Il ritorno del re (Il Signore degli Anelli, #3) (My Rating: 5)
+  Average rating: 3.5/5
+
+
+2025-04-06 11:05:57 - --------------------------------------------------
+2025-04-08 20:54:06 - Question: How many books by Hamsun did I read?
+2025-04-08 20:54:06 - Question type: reading_stats, Number: 10, Simple: False
+2025-04-08 20:54:06 - Using temperature: 0.1
+2025-04-08 20:54:06 - Answer: Reading Statistics:
+==================
+
+Total books in library: 961
+Books with 'read' dates: 709
+
+Books read per year:
+- 1999: 1 books
+- 2000: 1 books
+- 2001: 4 books
+- 2002: 1 books
+- 2003: 4 books
+- 2004: 2 books
+- 2005: 3 books
+- 2006: 3 books
+- 2007: 2 books
+- 2008: 1 books
+- 2009: 18 books
+- 2010: 16 books
+- 2011: 21 books
+- 2012: 22 books
+- 2013: 10 books
+- 2014: 13 books
+- 2015: 29 books
+- 2016: 21 books
+- 2017: 35 books
+- 2018: 43 books
+- 2019: 80 books
+- 2020: 83 books
+- 2021: 99 books
+- 2022: 87 books
+- 2023: 55 books
+- 2024: 50 books
+- 2025: 5 books
+
+2025-04-08 20:54:06 - --------------------------------------------------

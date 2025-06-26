@@ -1,0 +1,18 @@
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyAb8kXU_LT8JoezrCsO4epKPyXtcair_dQ",
+  authDomain: "creatieve-tijdlijn.firebaseapp.com",
+  databaseURL: "https://creatieve-tijdlijn-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "creatieve-tijdlijn",
+  storageBucket: "creatieve-tijdlijn.firebasestorage.app",
+  messagingSenderId: "483637983826",
+  appId: "1:483637983826:web:c01a0b3f4d9f68e84c3d8b"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
