@@ -26,14 +26,31 @@ import pandas as pd
 import re
 from pathlib import Path
 import io
+import logging
 
 import sys
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
 
+log_path = Path(__file__).resolve().parent / "signal_export.log"
+logging.basicConfig(
+    level=logging.DEBUG,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    handlers=[
+        logging.FileHandler(log_path, encoding='utf-8'),
+        logging.StreamHandler(sys.stdout)
+    ]
+)
+logger = logging.getLogger(__name__)
+
+import tempfile
+
 BASE_DIR = Path(r"G:\Mijn Drive\Backup\Signal\converted")
 CHATS_DIR = BASE_DIR / 'chats'
 PARSED_DIR = BASE_DIR / 'chats-parsed'
+
+temp_workspace = Path(tempfile.gettempdir()) / "signal_export_workspace"
+TEMP_CHATS_DIR = temp_workspace / 'chats'
 
 def run_sigexport_quiet(args):
     """Run sigexport and capture ONLY chat names (no messages)"""
@@ -64,41 +81,49 @@ def run_sigexport_quiet(args):
         
         return chats
     except subprocess.CalledProcessError as e:
-        print("✗ sigexport --list-chats failed:", e.stderr)
+        logger.error(f"✗ sigexport --list-chats failed: {e.stderr}")
         sys.exit(1)
 
 def list_chats_clean():
     """List ONLY chat names, numbered for easy selection"""
-    print("\n📋 Your Signal Groups/Chats:")
-    print("=" * 60)
+    logger.info("\n📋 Your Signal Groups/Chats:")
+    logger.info("=" * 60)
     
     chats = run_sigexport_quiet([])
     if not chats:
-        print("❌ No chats found. Check Signal Desktop is closed.")
+        logger.error("❌ No chats found. Check Signal Desktop is closed.")
         return []
     
     for i, chat in enumerate(chats, 1):
-        print(f"{i:2d}. {chat}")
+        logger.info(f"{i:2d}. {chat}")
     
-    print(f"\nTotal: {len(chats)} chats")
+    logger.info(f"\nTotal: {len(chats)} chats")
     return chats
 
 def ensure_dirs():
-    CHATS_DIR.mkdir(parents=True, exist_ok=True)
+    TEMP_CHATS_DIR.parent.mkdir(parents=True, exist_ok=True)
     PARSED_DIR.mkdir(parents=True, exist_ok=True)
+    CHATS_DIR.mkdir(parents=True, exist_ok=True)
 
 def export_chats(group_name=None):
+    if temp_workspace.exists():
+        try:
+            import shutil
+            shutil.rmtree(temp_workspace, ignore_errors=True)
+        except:
+            pass
+            
     ensure_dirs()
     
-    export_args = ['--paginate=0', '--overwrite']
+    export_args = ['--paginate=0']
     if group_name:
         export_args.extend(['--chats', group_name])
-        print(f"📤 Exporting: {group_name}")
+        logger.info(f"📤 Exporting: {group_name}")
     else:
-        print("📤 Exporting ALL chats")
+        logger.info("📤 Exporting ALL chats")
     
-    cmd = ['sigexport'] + export_args + [str(CHATS_DIR)]
-    print(f"Running: {' '.join(cmd)}")
+    cmd = ['sigexport'] + export_args + [str(TEMP_CHATS_DIR)]
+    logger.debug(f"Running command: {' '.join(cmd)}")
     
     env = os.environ.copy()
     env['PYTHONIOENCODING'] = 'utf-8'
@@ -106,10 +131,13 @@ def export_chats(group_name=None):
     
     try:
         subprocess.run(cmd, check=True, env=env)
-        print("✓ Export complete!")
+        logger.info("✓ Export complete! Moving files to G: Drive...")
+        import shutil
+        shutil.copytree(TEMP_CHATS_DIR, CHATS_DIR, dirs_exist_ok=True)
+        logger.info("✓ Files moved successfully.")
         return True
-    except subprocess.CalledProcessError:
-        print("✗ Export failed. Check Signal Desktop is closed.")
+    except subprocess.CalledProcessError as e:
+        logger.error(f"✗ Export failed. Check Signal Desktop is closed. Details: {e}")
         return False
 
 def parse_chat_md(chat_file):
@@ -136,24 +164,24 @@ def parse_chat_md(chat_file):
             safe_name = chat_name.replace('/', '_').replace('\\', '_')
             csv_path = PARSED_DIR / f"{safe_name}.csv"
             df.to_csv(csv_path, index=False)
-            print(f"✓ Parsed → {csv_path} ({len(df)} messages)")
+            logger.info(f"✓ Parsed → {csv_path} ({len(df)} messages)")
         else:
-            print(f"⚠️ No messages in {chat_file}")
+            logger.warning(f"⚠️ No messages in {chat_file}")
             
     except Exception as e:
-        print(f"✗ Parse error {chat_file}: {e}")
+        logger.error(f"✗ Parse error {chat_file}: {e}")
 
 def parse_all_chats():
     md_files = list(CHATS_DIR.rglob('*.md'))
     
     if not md_files:
-        print(f"❌ No .md files in '{CHATS_DIR}/'. Export first.")
+        logger.error(f"❌ No .md files in '{CHATS_DIR}/'. Export first.")
         return
     
-    print(f"🔄 Parsing {len(md_files)} chats...")
+    logger.info(f"🔄 Parsing {len(md_files)} chats...")
     for md_file in md_files:
         parse_chat_md(md_file)
-    print("✓ All parsing complete!")
+    logger.info("✓ All parsing complete!")
 
 def main():
     parser = argparse.ArgumentParser(description="Signal Chat Exporter", 
@@ -187,13 +215,10 @@ def main():
         if chat_md.exists():
             parse_chat_md(chat_md)
         else:
-            print(f"❌ '{args.parse}' not found. Export first.")
+            logger.error(f"❌ '{args.parse}' not found. Export first.")
             
     else:
-        print("ℹ️ USE:")
-        print("  python signal_export.py --list")
-        print("  python signal_export.py --group \"My Group\"")
-        print("  python signal_export.py --all")
+        logger.info("ℹ️ USE:\n  python signal_export.py --list\n  python signal_export.py --group \"My Group\"\n  python signal_export.py --all")
 
 if __name__ == "__main__":
     main()
