@@ -31,7 +31,7 @@ import sys
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
 
-BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = Path(r"G:\Mijn Drive\Backup\Signal\converted")
 CHATS_DIR = BASE_DIR / 'chats'
 PARSED_DIR = BASE_DIR / 'chats-parsed'
 
